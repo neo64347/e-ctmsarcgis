@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aldrich&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Dashboard.css">
+    <link rel="stylesheet" href="assets/css/dh-card-image-left-dark.css">
+    <link rel="stylesheet" href="assets/css/Features-Image.css">
+    <link rel="stylesheet" href="assets/css/Footer-Multi-Column.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <!--Start Navbar Left Side-->
+    <ul class="nav flex-column shadow d-flex justify-content-lg-start sidebar mobile-hid" style="background: black;">
+        <li class="nav-item text-start d-flex d-sm-flex d-md-flex d-lg-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xl-center justify-content-xxl-center logo-holder">
+            <div class="text-center text-white d-lg-flex d-xxl-flex justify-content-lg-start justify-content-xxl-center logo py-4 mx-4"><a class="float-end d-lg-flex justify-content-lg-center" id="sidebarToggleHolder" href="#"><i class="fas fa-bars d-lg-flex justify-content-lg-start" id="sidebarToggle" style="color: green;font-size: 25px;border-style: none;text-decoration:none;"></i></a></div>
+        </li>
+        <li class="nav-item"><input type="search" placeholder="Search..." style="margin-left: 17px; margin-bottom:17px;" /></li>
+        <li class="nav-item" style="margin-left: 10px;"><a class="nav-link text-start py-1 px-0" href="dashboard.html" style="margin-left: 10px;background: transparent;"><i class="fas fa-chart-bar mx-3" style="color: green;margin-left: 10px;font-size: 20px;"></i><span class="text-nowrap mx-2" style="color: white;margin-left: 10px;background: transparent;">Dashboard</span></a></li>
+        <li class="nav-item" style="margin-left: 10px;"><a class="nav-link text-start py-1 px-0" href="user.html" style="margin-left: 10px;background: transparent;"><i class="fas fa-user mx-3" style="color: green;margin-left: 10px;font-size: 20px;"></i><span class="text-nowrap mx-2" style="color: white;margin-left: 10px;background: transparent;">User profile</span></a></li>
+        <li class="nav-item" style="margin-left: 10px;"></li>
+        <li class="nav-item" style="margin-left: 10px;"><a class="nav-link text-start py-1 px-0" href="maps.html" style="margin-left: 10px;background: transparent;"><i class="fas fa-map-marked-alt mx-3" style="color: green;margin-left: 10px;font-size: 20px;"></i><span class="text-nowrap mx-2" style="color: white;margin-left: 10px;">Maps</span></a></li>
+        <li class="nav-item" style="margin-left: 10px;"></li>
+        <li class="nav-item" style="margin-left: 10px;">
+            <!--Start Log Out --><form action="index.html" method="post"><button class="btn btn-light d-md-flex d-xxl-flex align-items-md-center align-items-xxl-center" type="submit" data-bs-toggle="modal" data-bs-target="#signup" style="border-radius: 0px;font-weight: bold;color: white;background: black;--bs-primary: #057825;--bs-primary-rgb: 5,120,37;margin-left: 12px;border-width: 0px;border-color: transparent;"><i class="fas fa-sign-in-alt" style="font-weight: bold;color: green;font-size: 20px;"></i>      Log Out</button>
+    <!--End Log Out -->
+</form>
+            <!--EndLog Out -->
+        </li>
+    </ul>
+    <!--EndNavbar Left Side-->
+    <!--Start Map content API-->
+    <div class="container map-clean"></div>
+    <!--End Map content API-->
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "103222492509718");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v14.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/sidebar.js"></script>
+</body>
+
+</html>
