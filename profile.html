@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>E-CTMS</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css">
+    <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+
+<body>
+    <div id="wrapper" class="d-flex" style="background: rgb(255,255,255);">
+        <!--sidebar-->
+        <div id="sidebar-wrapper" style="background: rgb(0,0,0);height: 100%;">
+            <div data-aos="fade-right" data-aos-duration="950" data-aos-delay="350" data-aos-once="true" class="list-group list-group-flush my-3" style="background: #000000;"><a class="text-center list-group-item list-group-item-action bg-transparent second-text active" href="#" style="font-size: 20px;color: rgb(255,255,255);"><i class="fas fa-shield-alt me-2" style="color: var(--main-text-color);"></i>ADMIN</a><a data-bss-hover-animate="pulse" class="list-group-item list-group-item-action bg-transparent second-text fw-bold" href="dashboard.html" style="color: rgb(255,255,255);"><i class="fas fa-tachometer-alt me-2" style="color: rgb(6,84,23);"></i>DASHBOARD</a><a data-bss-hover-animate="pulse" class="list-group-item list-group-item-action bg-transparent second-text fw-bold" href="profile.html" style="color: rgb(255,255,255);"><i class="fas fa-user me-2" style="color: rgb(6,84,23);"></i>PROFILE</a><a data-bss-hover-animate="pulse" class="list-group-item list-group-item-action bg-transparent second-text fw-bold" href="maps.html" style="color: rgb(255,255,255);"><i class="fas fa-map-marked-alt me-2" style="color: rgb(6,84,23);"></i>MAPS</a><a data-bss-hover-animate="pulse" class="list-group-item list-group-item-action bg-transparent second-text fw-bold" href="index.html" style="color: rgb(255,255,255);"><i class="fas fa-sign-out-alt me-2" style="font-size: 17px;color: rgb(6,84,23);"></i>LOG OUT</a></div>
+        </div>
+        <!--sidebar-wrapper-->
+        <!--Page Content
+
+ -->
+        <div class="container-fluid px-1" style="border-style: none;border-color: transparent;height: 100%;">
+            <div class="row row-cols-1">
+                <div class="col"><button class="btn btn-primary d-flex d-sm-flex d-lg-flex d-xxl-flex justify-content-start align-items-center justify-content-sm-start justify-content-lg-start align-items-lg-center justify-content-xxl-start align-items-xxl-center bg-transparent shadow-none" data-aos="fade-down" data-aos-duration="900" data-aos-delay="350" type="button" style="border-style: solid;border-color: transparent;font-size: 25px;font-weight: bold;width: 100%;color: rgb(6,84,23);"><i class="fas fa-align-justify me-2" id="menu-toggle" style="color: rgb(6,84,23);"></i>PROFILE</button>
+                    <!--SDK and API Messenger-->
+                    <div id="fb-root"></div>
+                    <div id="fb-customer-chat" class="fb-customerchat"></div>
+                    <!--SDK and API Messenger-->
+                </div>
+                <div class="col" data-aos="zoom-in" data-aos-duration="950" data-aos-delay="350" data-aos-once="true"><div class="container">
+    <div class="row gutters">
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="account-settings">
+                <div class="user-profile">
+                    <div class="user-avatar">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Maxwell Admin">
+                    </div>
+                    <h5 class="user-name">John Ed Manauis</h5>
+                    <h6 class="user-email">johnedmanauis@gmail.com</h6>
+                </div>
+                <div class="about">
+                    <h5>About</h5>
+                    <p>I'm John Ed, a Fullstack Developer and i enjoy learning more on new tech stacks and cloud integrations</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+    <div class="card h-100">
+        <div class="card-body">
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h5 style="color:rgb(6,84,23)";>Personal Details</h5>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="eMail">Email</label>
+                        <input type="email" class="form-control" id="eMail" placeholder="Enter email ID">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="website">Website URL</label>
+                        <input type="url" class="form-control" id="website" placeholder="Website url">
+                    </div>
+                </div>
+            </div>
+            <div class="row gutters mt-1 mb-1">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <h5 class="mt-3 mb-2" style="color:rgb(6,84,23)";>Address</h5>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="Street">Street</label>
+                        <input type="name" class="form-control" id="Street" placeholder="Enter Street">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="ciTy">City</label>
+                        <input type="name" class="form-control" id="ciTy" placeholder="Enter City">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="sTate">Province</label>
+                        <input type="text" class="form-control" id="sTate" placeholder="Enter Province">
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div class="form-group">
+                        <label for="zIp">Zip Code</label>
+                        <input type="text" class="form-control" id="zIp" placeholder="Zip Code">
+                    </div>
+                </div>
+            </div>
+            <div class="row gutters">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="text-right">
+                        <button type="button" id="submit" name="submit" class="btn btn-secondary mt-3 mb-2 ">Cancel</button>
+                        <button type="button" id="submit" name="submit" class="btn green-button mt-3 mb-2">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/aos.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://js.arcgis.com/4.24"></script>
+    <script src="assets/js/iarcgis.js"></script>
+    <script src="assets/js/messenger-sdk.js"></script>
+    <script src="assets/js/messenger.js"></script>
+    <script src="assets/js/toggle-wrapper.js"></script>
+</body>
+
+</html>
