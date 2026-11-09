@@ -1,0 +1,39 @@
+/* Responsive fixes for the admin pages (dashboard, profile, maps) */
+
+/* Content column fills the remaining space and never overflows */
+#wrapper { min-height: 100vh; }
+#wrapper > .container-fluid { flex: 1 1 auto; min-width: 0; }
+#wrapper > .container-fluid .row { margin-left: 0; margin-right: 0; }
+
+/* Map fills the screen below the page title (it was collapsing to 0px) */
+#viewDiv.map-clean {
+  height: calc(100vh - 64px) !important;
+  height: calc(100dvh - 64px) !important;
+  min-height: 360px;
+}
+
+/* Charts: comfortable spacing, never wider than their column */
+canvas[data-bss-chart] { max-width: 100%; }
+#wrapper > .container-fluid .col > .container-fluid { padding: .5rem; }
+
+/* Phones and small tablets: sidebar slides over the page instead of squeezing it */
+@media (max-width: 767.98px) {
+  #sidebar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1045;
+    min-height: 100vh;
+    overflow-y: auto;
+    box-shadow: 4px 0 24px rgba(0, 0, 0, .4);
+  }
+  #wrapper.toggled::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 1040;
+    background: rgba(0, 0, 0, .45);
+  }
+  #menu-toggle { padding: .5rem; margin-left: -.25rem; }
+}
